@@ -70,7 +70,7 @@ exports.findAll = async (req, res) => {
 };
 
 
-// Delete a Tutorial with the specified id in the request
+// Delete a event with the specified id in the request
 exports.delete = async (req, res) => {
   const id = req.params.id;
   try {
@@ -89,7 +89,7 @@ exports.delete = async (req, res) => {
   }
 };
 
-// find all published events from db
+// find all events from db
 exports.findAllfromdb = async (req, res) => {
   try {
     let data = await Calender.findAll()
@@ -98,7 +98,7 @@ exports.findAllfromdb = async (req, res) => {
   catch (err) {
     res.status(500).send({
       message:
-        err.message || "Some error occurred while retrieving tutorials.",
+        err.message || "Some error occurred while retrieving events.",
     });
   };
 };
